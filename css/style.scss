@@ -1,0 +1,72 @@
+@mixin card-style {
+  margin: 10px;
+  border: 1px solid #666;
+
+}
+
+html {
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+
+    .header {
+      background-color: black;
+      width: 100%;
+      .header-text {
+      }
+      .header-ul {
+        display: flex;
+        list-style: none;
+        float: right;
+        color: white;
+        .header-list {
+          display: flex;
+          margin-right: 20px;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+    main {
+      .main {
+        background-image: url(/img/img/work-3938876_1920-1.png);
+        background-size: cover;
+        background-position: center;
+        height: 551px;
+
+        .top-title {
+          padding-top: 240px;
+          padding-bottom: 240px;
+          text-align: center;
+          font-size: 60px;
+          font-family: serif;
+        }
+        .course {
+          .sub-title {
+            text-align: center;
+            font-size: 40px;
+            font-family: serif;
+          }
+          .course-cont {
+            ul {
+              list-style: none;
+            }
+            .course-list {
+              display: flex;
+              .course-item {
+                @include card-style();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
